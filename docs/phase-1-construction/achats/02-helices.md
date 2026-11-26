@@ -25,7 +25,7 @@ La fiche Holybro du kit indique pour l'hélice T1045 II une **limite de poussée
 
 **Parade : plafonner la sortie moteur dans ArduPilot** avec `MOT_SPIN_MAX` ≈ **0,90** *(valeur à vérifier en vol, dans les logs)*.
 - L'hélice reste sous sa limite mécanique.
-- Le courant tombe à ~14 A par moteur au lieu de 16,4 A : marge ×1,45 pour les ESC 20 A ([fiche 05](05-esc.md)).
+- Le courant tombe à ~14 A par moteur au lieu de 16,4 A : marge d’environ ×1,4 pour les ESC 20 A (20 ÷ 14) ([fiche 05](05-esc.md)).
 - Le courant total à plein gaz baisse aussi, ce qui soulage les fils du PM02 V3, donnés pour 30 A en continu ([fiche 06](06-puissance-bec.md)).
 
 **Conséquence sur la charge utile :** avec un rapport poussée/poids de 2, le drone peut peser au plus ~2,4 kg en vol, soit **~0,8–1 kg de charge utile** en plus de la configuration de la phase 1 (~1,4–1,6 kg). Les « 1 500 g de charge utile » annoncés par Holybro donnent un rapport d'environ 1,7 : argument commercial, non retenu.
