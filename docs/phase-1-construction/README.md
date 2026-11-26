@@ -8,6 +8,8 @@
 >
 > Les prix restent des relevés à une date donnée : les revérifier dans `bom.md` avant chaque commande.
 
+> 🧰 **Équipement déjà acheté** : à quoi sert chaque pièce, pourquoi elle, et le challenge → **[récapitulatif équipement](equipement.md)**.
+
 ---
 
 ## 1. Préalables (avant tout achat)
