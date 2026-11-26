@@ -77,7 +77,7 @@ Aucun vol n'est possible, ni légal, sans un moyen de reprendre la main et de co
 **Challenge**
 | Alternative | Pourquoi on ne l'a pas prise |
 |---|---|
-| RadioMaster Boxer (~180 €) | Meilleure en main (grands manches), mais **~110 € de plus**. Inutile pour apprendre |
+| RadioMaster Boxer (~180–190 € *(à vérifier)*) | Meilleure en main (grands manches), mais **~110 € de plus**. Inutile pour apprendre |
 | RadioMaster TX16S | Grand écran et bi-bande, mais plus lourde et encore plus chère. Le 900 MHz ne sert à rien en France (915 MHz y est illégal) |
 | FrSky, Spektrum, Flysky, DJI | Protocoles fermés, récepteurs chers, moins bien intégrés à ArduPilot |
 | Radio d'occasion | C'était l'achat d'occasion le plus pertinent, mais la promo neuve à 70 € réduisait beaucoup l'intérêt |
@@ -280,7 +280,7 @@ Il se place entre la batterie (XT60) et la carte de distribution du kit.
 | Référence | AR0064840 |
 | Lien | [studiosport.fr](https://www.studiosport.fr/controleur-de-vol-pixhawk-6c-mini-holybro-a34703.html) |
 | Prix | **179,00 €** |
-| Fiche détaillée | [07 — Contrôleur de vol](achats/07-controleur-de-vol.md) *(rédigée avant le choix du Mini : à mettre à jour)* |
+| Fiche détaillée | [07 — Contrôleur de vol](achats/07-controleur-de-vol.md) (révision du 24/11/2026 : choix du Mini) |
 
 **À quoi il sert** : c'est le cerveau du drone.
 - Il lit ses capteurs (2 accéléromètres et gyroscopes, baromètre), le GPS et la radio.
@@ -363,7 +363,7 @@ C'était l'inverse dans le plan initial. Le choix a été retourné le 24/11/202
 **Challenge**
 | Alternative | Pourquoi on ne l'a pas prise |
 |---|---|
-| **Holybro S500 V2 ARF** (même propulsion, ~170–200 €) | Moins cher et sans soudure, mais bras en nylon, **pas de rails** pour les capteurs. Choisi un temps quand le X500 était en rupture ([issue #3](https://github.com/HSSRD/Dragon/issues/3)), puis abandonné ([issue #4](https://github.com/HSSRD/Dragon/issues/4)) |
+| **Holybro S500 V2 ARF** (même propulsion, 174 $ HT chez Holybro ; prix en euros *(à vérifier)*) | Moins cher et sans soudure, mais bras en nylon, **pas de rails** pour les capteurs. Choisi un temps quand le X500 était en rupture ([issue #3](https://github.com/HSSRD/Dragon/issues/3)), puis abandonné ([issue #4](https://github.com/HSSRD/Dragon/issues/4)) |
 | Montage pièce par pièce (cadre ReadyToSky S500 + moteurs et ESC Holybro, ~285 €) | ~65 € de moins, mais cadre générique en plastique, ~12 soudures de puissance, pas de rails. Le cadre X500 seul n'est pas vendu en Europe |
 | Kits génériques Amazon / AliExpress (F450, S500 à 100–150 €) | Moteurs 2212 bas de gamme, ESC SimonK qui ne gèrent pas le DShot. Qualité inégale |
 | Holybro X650 (~810–860 €) | Pour des charges de 1,5 kg et plus, en 6S. Hors budget, inutile en phase 1 |
