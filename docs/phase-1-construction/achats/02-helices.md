@@ -2,6 +2,8 @@
 
 [← Doc globale](../README.md) · [Challenge global](../challenge-2026-11-20.md)
 
+> **Révision 2026-11-26 :** ajout de la **limite de poussée de 1,2 kg par hélice** (fiche Holybro, relevée le 2026-11-22). Elle vaut pour le X500 V2 comme pour le S500 V2, qui ont la même propulsion.
+>
 > **Révision 2026-11-20 :** le kit ARF contient **6 hélices 1045** ✅ (soit 1,5 jeu). Il reste à acheter du rechange.
 
 ## Rôle
@@ -11,6 +13,22 @@ Les hélices produisent la poussée. Elles sont désignées par **diamètre × p
 - **1045**, 2 CW + 2 CCW par jeu (CW = sens horaire, CCW = sens antihoraire).
 - Fixation compatible avec le moteur du kit (hélices à « retainer » fournies avec le kit ✅).
 - La fiche de poussée Holybro est mesurée avec des **T-Motor T1045 II** ✅ : ce sont les hélices de référence pour retrouver les chiffres de poussée.
+
+## Limite de poussée de l'hélice
+La fiche Holybro du kit indique pour l'hélice T1045 II une **limite de poussée de 1,2 kg** (« Thrust Limitation 1.2kg ») ✅, alors que le moteur 2216 KV920 atteint **1 332 g à 100 % des gaz** (16,4 A en 4S).
+
+| Conséquence | Valeur |
+|---|---|
+| Poussée utile retenue | **4 × 1,2 kg = 4,8 kg** (au lieu de 5,3 kg) |
+| Gaz à partir desquels on dépasse la limite | ~90 % *(à vérifier)* |
+| Rendement optimal annoncé | 6 000–7 000 tr/min, soit ~55–62 % des gaz |
+
+**Parade : plafonner la sortie moteur dans ArduPilot** avec `MOT_SPIN_MAX` ≈ **0,90** *(valeur à vérifier en vol, dans les logs)*.
+- L'hélice reste sous sa limite mécanique.
+- Le courant tombe à ~14 A par moteur au lieu de 16,4 A : marge d’environ ×1,4 pour les ESC 20 A (20 ÷ 14) ([fiche 05](05-esc.md)).
+- Le courant total à plein gaz baisse aussi, ce qui soulage les fils du PM02 V3, donnés pour 30 A en continu ([fiche 06](06-puissance-bec.md)).
+
+**Conséquence sur la charge utile :** avec un rapport poussée/poids de 2, le drone peut peser au plus ~2,4 kg en vol, soit **~0,8–1 kg de charge utile** en plus de la configuration de la phase 1 (~1,4–1,6 kg). Les « 1 500 g de charge utile » annoncés par Holybro donnent un rapport d'environ 1,7 : argument commercial, non retenu.
 
 ## Options comparées
 
