@@ -89,6 +89,8 @@ Port **gratuit dès 49 €** en point relais (France métropolitaine). Couper en
 **Risque :** si on abandonne le Pixhawk, le GPS et le PM02 restent compatibles avec la plupart des contrôleurs de vol ArduPilot.
 
 ### Panier B — alerte de stock posée, à commander au réassort
+
+> ✅ **Commandé et reçu** (536,80 € TTC) : kit X500 V2 ARF + **Pixhawk 6C Mini** (au lieu du 6C standard). Détail et écarts : [commande panier B](commandes/2026-11-25-studiosport-panier-b.md). Les **hélices n'ont pas été commandées** : 1 lot reste à acheter.
 | Article | Lien | Prix |
 |---|---|---|
 | Kit X500 V2 **ARF** (moteurs KV880 selon la fiche : à confirmer) | [lien](https://www.studiosport.fr/holybro-x500-v2-kit-arf/) | 349,90 € |

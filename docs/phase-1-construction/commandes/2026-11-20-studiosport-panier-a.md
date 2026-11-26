@@ -1,6 +1,6 @@
 # Commande Studiosport — panier A (2026-11-20)
 
-> Statut : **commandée**, en attente de livraison.
+> Statut : **reçue**, contrôles à réception à faire.
 > Prévu dans : [bom.md § Panier A](../bom.md#panier-a--à-commander-maintenant-en-stock-prix-promo)
 
 | Champ | Valeur |

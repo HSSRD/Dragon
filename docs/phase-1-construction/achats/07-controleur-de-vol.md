@@ -2,6 +2,11 @@
 
 [← Doc globale](../README.md) · [Challenge global](../challenge-2026-11-20.md)
 
+> **Révision 2026-11-24 — choix final : Pixhawk 6C Mini** (acheté le 25/11/2026, 179 € chez Studiosport, voir la [commande du panier B](../commandes/2026-11-25-studiosport-panier-b.md)).
+> - Holybro livre une **nouvelle révision du 6C standard** (IMU DSK320X + BMI423). Le **BMI423 n'a aucun pilote dans ArduPilot** et le DSK320X n'est reconnu qu'en master ([PR #34484](https://github.com/ArduPilot/ardupilot/pull/34484), rétroportage vers 4.7 ouvert au 24/11/2026). Le Mini garde l'ICM-42688-P + BMI088, reconnus en stable.
+> - Le port série en moins (pas de TELEM3) se compense : capteurs futurs en I2C ou DroneCAN, GPS2 libre. POWER2 n'est pas utile ici. Sorties moteurs intégrées : pas de carte PWM à acheter.
+> - Les sections ci-dessous qui recommandent le 6C standard sont **conservées pour l'historique** du raisonnement. L'allocation des ports est mise à jour pour le Mini.
+>
 > **Révision 2026-11-20 :**
 > - La **Matek H743-SLIM est arrêtée** (V3 et V4) ✅ → l'option « éco » de la v1 disparaît.
 > - Le PM02 n'est **pas inclus** dans la boîte de base du 6C.
@@ -27,14 +32,17 @@ C'est aussi la cible de la **phase 6** (firmware maison).
 
 Sources : [Holybro 6C](https://holybro.com/products/pixhawk-6c), [Holybro 6C Mini](https://holybro.com/products/pixhawk-6c-mini), [doc PX4](https://docs.px4.io/main/en/flight_controller/pixhawk6c.html), [doc ArduPilot](https://ardupilot.org/copter/docs/common-holybro-pixhawk6C.html), [liste Matek](https://www.mateksys.com/?page_id=2270).
 
-## Allocation des ports série (prévisionnelle)
-| Port | Usage |
+## Allocation des ports série (prévisionnelle, 6C Mini)
+| Port (ArduPilot) | Usage |
 |---|---|
-| GPS1 | GPS M10 + compas |
-| TELEM1 | **Ordinateur compagnon (phase 3), réservé** |
-| TELEM2 | Récepteur ELRS (CRSF) |
-| TELEM3 | Libre : télémétrie radio, balise, capteur |
-| GPS2 | Libre |
+| GPS1 (SERIAL3) | GPS M10 + compas |
+| TELEM1 (SERIAL1) | Récepteur ELRS (CRSF). Sous ArduPilot, le CRSF **ne passe pas** par l'entrée RC |
+| TELEM2 (SERIAL2) | **Ordinateur compagnon (phase 3), réservé** (port utilisé par la doc ArduPilot « Raspberry Pi via MAVLink ») |
+| GPS2 (SERIAL4) | Libre : capteur série, deuxième GPS |
+| CAN1 / CAN2, I2C | Capteurs futurs (flux optique, télémètre) de préférence ici |
+| USB | Mission Planner ; solution de repli pour le Raspberry Pi |
+
+*(Ancienne allocation pour le 6C standard : ordinateur compagnon sur TELEM1, ELRS sur TELEM2, TELEM3 libre.)*
 
 ## Recommandation
 **Pixhawk 6C, boîtier plastique, version « avec PM02 V3 »** (~218 $ HT, soit ~230–260 € TTC livré *(à vérifier)*).
